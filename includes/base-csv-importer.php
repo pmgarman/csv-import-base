@@ -89,7 +89,7 @@ if( ! class_exists( 'Base_CSV_Importer' ) ) {
 		 */
 		public function import_row( $row ) {
 			$row = apply_filters( 'csv_import_base_import_row', $row, $this->columns );
-			do_action( 'csv_import_base_import_row', $row, $this->columns );
+			do_action( 'csv_import_base_before_import_row', $row, $this->columns );
 
 			// Example Processing of data
 			$post = array();
